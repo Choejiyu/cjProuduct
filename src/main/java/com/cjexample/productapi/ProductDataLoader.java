@@ -17,12 +17,21 @@ public class ProductDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        // 초기 데이터 삽입
         if (productRepository.count() == 0) {
-            // 데이터가 없으면 초기 상품 데이터 삽입
-            Product product1 = new Product(1L, "Product 1", 100);
-            Product product2 = new Product(2L, "Product 2", 150);
-            Product product3 = new Product(3L, "Product 3", 200);
+            Product product1 = new Product();
+            product1.setId(1L);
+            product1.setName("Product 1");
+            product1.setStock(100);
+
+            Product product2 = new Product();
+            product2.setId(2L);
+            product2.setName("Product 2");
+            product2.setStock(150);
+
+            Product product3 = new Product();
+            product3.setId(3L);
+            product3.setName("Product 3");
+            product3.setStock(200);
 
             productRepository.save(product1);
             productRepository.save(product2);

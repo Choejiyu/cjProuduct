@@ -8,8 +8,9 @@ import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Version;
 
-    @Entity
+@Entity
     @Getter   // 자동으로 getter 메서드를 생성
     @Setter   // 자동으로 setter 메서드를 생성
     @NoArgsConstructor  // 기본 생성자 생성
@@ -20,6 +21,7 @@ import javax.persistence.Id;
         private Long id;
         private String name;
         private int stock;
+
 
     }
 
